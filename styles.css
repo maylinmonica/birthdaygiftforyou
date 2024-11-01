@@ -1,0 +1,626 @@
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Georgia', serif;
+  font-size: smaller;
+  color: #771e1e;
+}
+
+/* Background Parallax */
+.parallax-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #76bdec; /* Light pink background color */
+  overflow: hidden;
+}
+
+.hearts {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background-image: url('heart.png'); /* Add your heart image here */
+  background-size: 100px 100px; /* Size of the hearts */
+  animation: move 30s linear infinite;
+}
+
+@keyframes move {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-100%); }
+}
+
+/* Heart Container */
+.heart-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Slide Styles */
+.slide {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  text-align: center; /* Center text in slides */
+}
+
+.slide.active {
+  display: flex;
+  opacity: 1;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Gift Box Styles */
+.gift-box {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  perspective: 1000px;
+  margin-top: 20px;
+}
+
+.gift {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(0deg);
+  animation: giftAnimation 1s forwards;
+}
+
+.gift-lid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: #ff1493; /* Lid color */
+  border-radius: 8px;
+  text-align: center;
+  line-height: 75px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.gift-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: #ff69b4; /* Box color */
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes giftAnimation {
+  from { transform: rotateX(-90deg); }
+  to { transform: rotateX(0deg); }
+}
+
+/* Photo Frame Styles */
+.photo-frame {
+  display: flex;
+  flex-direction: column; /* Vertikal agar elemen tersusun rapi */
+  align-items: center; /* Pusatkan isi dalam photo-frame */
+  margin-top: 20px; /* Spasi di atas */
+}
+
+.photo-frame img {
+  width: 100%; /* Lebar gambar sertifikat */
+  max-width: 400px; /* Lebar maksimum */
+  height: auto; /* Menjaga rasio aspek */
+  border: 3px solid #d2a679; /* Border untuk penekanan */
+  border-radius: 8px; /* Sudut melengkung */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Bayangan untuk kedalaman */
+}
+
+.cert-image {
+  margin-bottom: 15px; /* Spasi di bawah gambar */
+}
+
+/* Flower Animation */
+.flower-animation {
+  width: 50px;
+  height: 50px;
+  background: url('flower.png') no-repeat center;
+  background-size: contain;
+  animation: bloom 2s infinite;
+}
+
+@keyframes bloom {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+/* Navigation Button Styles */
+.navigation {
+  margin-top: 20px; /* Spasi di atas tombol */
+}
+
+
+
+
+/* Styles specific for Slide 7 */
+#slide6 .content-container {
+  display: flex; /* Mengatur layout secara horizontal */
+  align-items: center; /* Menyelaraskan item secara vertikal di tengah */
+  justify-content: center; /* Menyelaraskan isi di tengah secara horizontal */
+  gap: 20px; /* Menambahkan jarak antar elemen */
+  margin-top: 20px; /* Memberi jarak atas pada konten */
+  flex-wrap: wrap; /* Agar elemen berbaris vertikal di layar kecil */
+}
+
+#slide6 .photo-frame {
+  flex: 1; /* Membuat photo-frame mengambil sisa ruang */
+  display: flex;
+  justify-content: center; /* Memusatkan gambar sertifikat */
+  align-items: center;
+  margin: 10px; /* Spasi tambahan untuk layar kecil */
+}
+
+#slide6 .photo-frame img {
+  width: 100%; /* Lebar penuh photo-frame */
+  max-width: 500px; /* Lebar maksimum */
+  height: auto; /* Menjaga rasio aspek */
+  border: 3px solid #d2a679; /* Border untuk penekanan */
+  border-radius: 0px; /* Sudut melengkung */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Bayangan untuk kedalaman */
+}
+
+#slide6 .card {
+  background-color: white; /* Background warna putih */
+  border: 1px solid #d2a679; /* Border */
+  border-radius: 10px; /* Sudut membulat */
+  padding: 20px; /* Spasi dalam */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow */
+  max-width: 300px; /* Lebar maksimum untuk kartu teks */
+  text-align: left; /* Rata kiri untuk teks */
+  flex-shrink: 0; /* Cegah kartu menyusut */
+  margin: 10px; /* Spasi tambahan untuk layar kecil */
+}
+
+#slide6 .card p {
+  margin: 10px 0; /* Jarak atas dan bawah */
+  font-size: 1em; /* Ukuran font */
+  color: #444; /* Warna teks */
+  line-height: 1.5; /* Jarak antar baris */
+}
+
+/* Ukuran H1 di Slide */
+.slide h1 {
+  font-size: 3em; /* Sesuaikan ukuran sesuai keinginan, misalnya 2.5em atau lebih */
+  color: #771e1e; /* Pastikan warnanya tetap konsisten */
+  margin: 10px 0; /* Jarak atas dan bawah untuk spasi */
+}
+
+/* Slide 4: Unlock the Memories */
+#slide4 {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff0f5;
+  border-radius: 10px;
+}
+
+/* Lock Icon Styling */
+.lock-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 20px auto;
+}
+
+.lock {
+  font-size: 50px;
+  color: #ff6699;
+  transition: transform 0.3s ease;
+}
+
+.lock:hover {
+  transform: scale(1.1);
+}
+
+/* Memories Gallery Styling */
+.memories-gallery {
+  display: none; /* Initially hidden */
+  flex-direction: column;
+  overflow-y: auto;
+  max-height: 300px;
+  padding: 10px;
+  border-top: 2px solid #ff99cc;
+}
+
+.memory-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffeeee;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.memory-image {
+  width: 100px;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* Navigation Button */
+.nextButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #7c1c34;
+  background-color: #ffffff;
+  
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.nextButton:hover {
+  background-color: #ffffff;
+}
+/* General Slide Styling */
+.slide {
+  display: none; /* All slides hidden by default */
+  text-align: center;
+  padding: 20px;
+}
+
+/* Visible Slide */
+.slide.active {
+  display: block;
+}
+
+/* Lock Slide Styles */
+#slide4 {
+  background-color: #fff0f5;
+  border-radius: 10px;
+}
+
+.lock-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 20px auto;
+}
+
+.lock {
+  font-size: 50px;
+  color: #ff6699;
+  transition: transform 0.3s ease;
+}
+
+.lock:hover {
+  transform: scale(1.1);
+}
+
+/* Memories Slide Styles */
+#slide5 {
+  background-color: #fdf5e6;
+  border-radius: 10px;
+}
+.memories-gallery {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  gap: 10px;
+  max-height: 300px;
+  max-width: 500px;
+  padding: 20px;
+}
+
+.memory-item {
+  display: flex;
+  flex-direction: row; /* Mengatur gambar dan teks agar berdampingan */
+  align-items: center;
+  background-color: #ffeeee;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.memory-image {
+  width: 250px; /* Sesuaikan ukuran agar tidak terlalu besar */
+  height: auto;
+  border-radius: 6px;
+  margin-right: 10px; /* Menambah jarak antara gambar dan teks */
+}
+
+.memory-text {
+  max-width: 50%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: justify; /* Membuat teks rata kiri dan kanan */
+  line-height: 1.6; 
+}
+
+/* Gaya untuk slide */
+.slide {
+  display: none; /* Menyembunyikan semua slide */
+}
+
+.slide.active {
+  display: block; /* Menampilkan slide aktif */
+}
+
+/* Menyembunyikan elemen */
+.hidden {
+  display: none; 
+}
+
+/* Gaya untuk amplop */
+.envelope {
+  width: 120px;
+  height: 80px;
+  background-color: #f8d8e2; /* Warna pastel lembut */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px auto; /* Menjaga margin di atas dan bawah */
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.envelope:hover {
+  transform: scale(1.05);
+}
+
+.envelope-flap {
+  font-size: 40px;
+  text-align: center;
+  padding: 10px 0;
+}
+
+
+.hidden {
+  display: none;
+}
+
+.love-letter-container {
+  display: none; /* Initial state is hidden */
+  background-color: #fff; /* Optional: set background color */
+  padding: 20px; /* Padding for the letter */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  max-height: 300px;
+  max-width: 500px; /* Maximum height for the container */
+  overflow-y: auto; /* Enable vertical scrolling */
+  resize: both; /* Allow resizing in both dimensions */
+  min-width: 300px; /* Minimum width */
+  min-height: 200px; /* Minimum height */
+}
+
+.envelope {
+  cursor: pointer; /* Change cursor to indicate clickable */
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 20px auto;
+}
+
+/* Gaya untuk surat */
+.letter-content {
+  margin: 20px; /* Margin untuk memberi jarak */
+  background-color: #ffffff; /* Warna latar belakang putih */
+  border: 2px solid #f28e8e; /* Border berwarna merah muda */
+  padding: 15px; /* Spasi dalam kotak */
+  border-radius: 8px; /* Sudut membulat */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Bayangan untuk kedalaman */
+  animation: fadeIn 0.5s ease-in-out; /* Animasi muncul */
+  width: 500px; /* Lebar kotak */
+  max-width: 90%; /* Maksimal lebar 90% dari layar untuk responsivitas */
+  max-height: 300px; /* Tinggi maksimum untuk konten agar dapat digulir */
+  overflow-y: auto; /* Mengaktifkan scroll hanya pada y-axis */
+  text-align: justify !; /* Rata kiri kanan */
+} 
+
+.letter-content p {
+  margin: 10px 0; /* Jarak antara paragraf */
+  line-height: 1.6; /* Jarak antar baris agar lebih nyaman dibaca */
+  
+}
+
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* Slide 7 Styles */
+#slide7 {
+  text-align: center;
+  padding: 30px; /* Padding untuk spasi di dalam slide */
+  background-color: #fff0f5; /* Warna latar belakang pastel */
+  border-radius: 10px; /* Sudut melengkung untuk border */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Bayangan untuk kedalaman */
+  max-width: 600px; /* Lebar maksimum slide */
+  margin: auto; /* Memusatkan slide */
+}
+
+/* Judul Slide */
+#slide7 h1 {
+  font-size: 2.5em; /* Ukuran font untuk judul */
+  color: #771e1e; /* Warna teks judul */
+  margin-bottom: 20px; /* Jarak bawah judul */
+}
+
+/* Deskripsi Lagu */
+.song-description {
+  font-size: 1.2em; /* Ukuran font untuk deskripsi */
+  color: #444; /* Warna teks deskripsi */
+  margin-bottom: 20px; /* Jarak bawah deskripsi */
+  line-height: 1.5; /* Jarak antar baris */
+}
+
+/* Video Container */
+.video-container {
+  margin: 20px 0; /* Margin atas dan bawah */
+  max-height: 300px;
+  max-width: auto;
+}
+
+/* Video Styles */
+.birthday-video {
+  width: 100%; /* Lebar penuh */
+  max-width: 200px; /* Lebar maksimum untuk video */
+  border-radius: 10px; /* Sudut melengkung untuk video */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Bayangan untuk video */
+}
+
+.audio-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.play-button, .pause-button {
+  background-color: #FF6F61; /* Warna latar belakang */
+  color: white; /* Warna teks */
+  border: none; /* Menghilangkan border default */
+  border-radius: 30px; /* Membuat tombol berbentuk bulat */
+  padding: 10px 20px; /* Ruang dalam tombol */
+  margin: 0 10px; /* Jarak antar tombol */
+  font-size: 18px; /* Ukuran font */
+  cursor: pointer; /* Menunjukkan bahwa tombol dapat diklik */
+  transition: background-color 0.3s ease; /* Efek transisi */
+}
+
+.play-button:hover, .pause-button:hover {
+  background-color: #FF9F8B; /* Warna saat hover */
+}
+
+
+/* Tombol Navigasi */
+.navigation {
+  margin-top: 20px; /* Spasi di atas tombol navigasi */
+}
+
+
+  
+  #slide7 h1 {
+    font-size: 2em; /* Ukuran font lebih kecil untuk judul */
+  }
+
+  .birthday-video {
+    max-width: 100%; /* Lebar penuh untuk video pada layar kecil */
+  }
+
+
+/* Slide 7 Styles */
+#slide7 {
+  text-align: center;
+  padding: 30px; /* Padding untuk spasi di dalam slide */
+  background-color: #fff0f5; /* Warna latar belakang pastel */
+  border-radius: 10px; /* Sudut melengkung untuk border */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Bayangan untuk kedalaman */
+  max-height: 450px; /* Lebar maksimum slide */
+  margin: auto; /* Memusatkan slide */
+}
+
+/* Judul Slide */
+#slide7 h1 {
+  font-size: 2.5em; /* Ukuran font untuk judul */
+  color: #771e1e; /* Warna teks judul */
+  margin-bottom: 20px; /* Jarak bawah judul */
+}
+
+/* Deskripsi Lagu */
+.song-description {
+  font-size: 1.2em; /* Ukuran font untuk deskripsi */
+  color: #444; /* Warna teks deskripsi */
+  margin-bottom: 20px; /* Jarak bawah deskripsi */
+  line-height: 1.5; /* Jarak antar baris */
+}
+
+/* Video Container */
+.video-container {
+  margin: 20px 0; /* Margin atas dan bawah */
+}
+
+/* Video Styles */
+.birthday-video {
+  width: 100%; /* Lebar penuh */
+  max-width: 300px; /* Lebar maksimum untuk video */
+  border-radius: 10px; /* Sudut melengkung untuk video */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Bayangan untuk video */
+}
+
+/* Kontrol Audio dan Video */
+.audio-controls {
+  margin: 20px 0; /* Margin untuk kontrol */
+}
+
+/* Tombol Kontrol */
+.audio-controls button {
+  padding: 10px 15px; /* Padding untuk tombol */
+  font-size: 1em; /* Ukuran font untuk tombol */
+  background-color: #ff69b4; /* Warna latar belakang tombol */
+  color: white; /* Warna teks tombol */
+  border: none; /* Tanpa border */
+  border-radius: 5px; /* Sudut melengkung */
+  cursor: pointer; /* Tangan saat hover */
+  transition: background-color 0.3s; /* Transisi untuk perubahan warna */
+  margin: 0 5px; /* Margin antar tombol */
+}
+
+.audio-controls button:hover {
+  background-color: #ff1493; /* Warna lebih gelap saat hover */
+}
+
+/* Tombol Navigasi */
+.navigation {
+  margin-top: 20px; /* Spasi di atas tombol navigasi */
+}
+
+
+/* Responsiveness */
+@media (max-width: 600px) {
+  #slide7 {
+    padding: 20px; /* Padding lebih kecil untuk layar kecil */
+  }
+  
+  #slide7 h1 {
+    font-size: 2em; /* Ukuran font lebih kecil untuk judul */
+  }
+
+  .birthday-video {
+    max-width: 100%; /* Lebar penuh untuk video pada layar kecil */
+  }
+}
+
+
+.love-gif {
+  width: 150px; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Center the image block */
+  margin: 20px auto; /* Center the GIF */
+  animation: fade-in 1s ease-in; /* Optional animation for fade-in effect */
+}
+
+@keyframes fade-in {
+  from {
+      opacity: 0; /* Start invisible */
+  }
+  to {
+      opacity: 1; /* End fully visible */
+  }
+}

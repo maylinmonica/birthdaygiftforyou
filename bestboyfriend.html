@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Sheng</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="parallax-background"></div> <!-- Background Parallax -->
+
+    <div class="heart-container">
+        <div id="slide1" class="slide active">
+            <h1>Halo Sheng!</h1>
+            <div class="navigation">
+                <button class="nextButton" onclick="nextSlide(1)">Next</button>
+            </div>
+        </div>
+
+        <div id="slide2" class="slide">
+            <h1>Do you know what date it is?</h1>
+            <div class="navigation">
+                <button class="nextButton" onclick="nextSlide(2)">Next</button>
+            </div>
+        </div>
+
+        <div id="slide3" class="slide">
+            <h1>It's your special day!</h1>
+            <div class="navigation">
+                <button class="nextButton" onclick="nextSlide(3)">Next</button>
+            </div>
+        </div>
+
+        <div id="slide4" class="slide active">
+          <h1 class="open-memories">Box Memories</h1>
+          <div class="lock-container" onclick="unlockMemories()">
+              <div class="lock" id="lock">
+                  <div class="lock-body">🔒</div>
+                  <div class="lock-keyhole">🔑</div>
+              </div>
+          </div>
+      </div>
+
+        <div id="slide5" class="slide hidden">
+            <h1>Memories</h1>
+            <div class="memories-gallery" id="memoriesGallery">
+              <audio id="birthday-song" src="birthdaysong.mp3"></audio>
+                <div class="memory-item">
+                    <img src="us2.png" alt="First photo" class="memory-image">
+                    <div class="memory-text">
+                        <p class="memory-caption">First photo Memories</p> 
+                        <p>Thanks to Kitamani dan Denpasar yang membuat kita dekat. Mungkin, kalo kamu ga jemput aku, kita ga bakal seperti sekarang wkwk</p>
+                    </div>
+                </div>
+
+                <div class="memory-item">
+                    <img src="us4.png" alt="Holiday Memories" class="memory-image">
+                    <div class="memory-text">
+                        <p class="memory-caption">Beach Memories</p>
+                        <p>Lucu banget ya nempel-nempel</p>
+                    </div>
+                </div>
+
+                <div class="memory-item">
+                    <img src="us1.png" alt="Holiday Memories" class="memory-image">
+                    <div class="memory-text">
+                        <p class="memory-caption">Grow up Memories</p>
+                        <p>Aku harap kita bisa grow up bareng-bareng ya, aku selalu support kamu yang terbaik, dan aku yakin kamu bisa mencapai semua goals lebih dari pencapaian kemarin</p>
+                    </div>
+                </div>
+
+                <div class="memory-item">
+                    <img src="topanz.png" alt="LDR Moment" class="memory-image">
+                    <div class="memory-text">
+                        <p class="memory-caption">LDR Moment</p>
+                        <p>Jujur sedih banget pas LDR kedua kalinya, banyak banget cobaan. Tapi untungnya kita masih bertahan sampai sekarang.</p>
+                    </div>
+                </div>
+
+                <div class="memory-item">
+                    <img src="us3.png" alt="Holiday Memories" class="memory-image">
+                    <div class="memory-text">
+                        <p class="memory-caption">Us Memories</p>
+                        <p>Mantai setelah jadian haha, jujur selalu suka mantai bareng kamu walau cuma bengang-bengong</p>
+                    </div>
+                </div>
+
+                <div class="memory-item">
+                    <img src="topanx3.png" alt="Pap Memories" class="memory-image">
+                    <div class="memory-text">
+                        <p class="memory-caption">Pap pacarkuuu❤️</p>
+                        <p>Kamu ganteng banget banget banget, jangan perna insecure ya!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="navigation">
+                <button class="nextButton" onclick="nextSlide(5)">Next</button>
+            </div>
+        </div>
+
+        <div id="slide10" class="slide">
+            <h1>You Get Love Letter!</h1>
+            <div class="envelope" onclick="openEnvelope()">
+                <div class="envelope-flap">💌</div>
+                <div class="envelope-body hidden" id="envelopeBody">
+                    <p>Open</p>
+                </div>
+            </div>
+      
+
+              <div class="love-letter-container hidden" id="loveLetterContainer">
+                  <div class="love-letter">
+                      <p>Hi, sheng. Selamat bertambah usia💖</p>
+                      <p>Sumpah mu yang ulang tahun aku yang excited wkwk. Seneng banget bisa merayakan momen spesial ini bareng kamu. Rasanya nggak percaya waktu berlalu begitu cepat, tapi setiap detik yang kita lewati bareng itu berharga banget.</p>
+                      <p>Di hari istimewa ini, aku mau kamu tahu betapa berartinya kamu buatku. Kamu tuh orang yang selalu bisa bikin hariku lebih indah walau kadang nyebelin. Setiap kali kita ngobrol, ketawa bareng, atau bahkan saat kita menghadapi masalah, aku merasa beruntung banget punya kamu di hidupku, yang selalu santai dalam menghadapi apapun. U’re the best boyfriend, dan aku bangga banget bisa jadi bagian dari perjalanan hidupmu.</p>
+                      <p>Aku harap di tahun ini, semua impian dan harapanmu bisa terwujud. Kamu punya segudang potensi, dan aku percaya kamu bisa mencapai semuanya. Jangan pernah ragu untuk mengejar apa yang kamu inginkan, ya! Ingat, aku selalu ada di sini buat dukung kamu, entah itu saat kamu lagi di puncak atau lagi down. Kalo ada yang bikin kamu stres atau kamu butuh teman untuk berbagi cerita, jangan ragu buat hubungi aku. I’m here for you, selalu! 💖</p>
+                      <p>Hari ini, nikmati setiap momen, ya! Rayakan dengan cara yang bikin kamu bahagia. Kamu layak dapat semua cinta dan kebahagiaan di dunia ini. Semoga setiap harapanmu di tahun baru ini bisa jadi kenyataan, dan semoga kita bisa terus menciptakan banyak kenangan indah bareng-bareng.</p>
+                      <p>Selamat ulang tahun sekali lagi, sayangku! Bahagia selalu! Semoga tahun ini jadi tahun yang paling seru dan penuh dengan petualangan. I love you so much, lebih dari kata-kata bisa ungkapkan! Mari kita jalani semester ini dengan penuh semangat! 💖🔥</p>
+                  </div>
+                  <button onclick="closeLoveLetter()">Tutup Surat</button>
+              </div>
+
+              <div class="navigation" id="navigationSlide10" style="display: none;"> <!-- Tombol Next disembunyikan secara default -->
+                <button class="nextButton" onclick="nextSlide(6)">Next</button>
+            </div>
+        </div>
+
+        <div id="slide13" class="slide">
+          <h1>I have something for you</h1>
+          <div class="navigation">
+              <button class="nextButton" onclick="nextSlide(13)">Next</button>
+          </div>
+      </div>
+
+
+        <div id="slide6" class="slide active">
+            <h1>I'm so proud of you</h1>
+            <div class="content-container">
+                <div class="photo-frame">
+                    <img src="certif.png" alt="Certificate" />
+                </div>
+                <div class="card">
+                    <h3>This certificate for you!</h3>
+                    <p>You are amazing! I’m so proud of all the hard work you’ve achieved. From your dedication in your job that always delivers the best results to your relentless efforts in pursuing your dreams, everything you do is truly inspiring. Every step you take shows how determined you are to achieve what you want. Thank you for being such a wonderful partner and always being there for me. Your presence makes my life so much brighter, and I’m sure your future will be filled with success. I will always support you, just as you are always there for me.</p>
+                </div>
+                <div class="navigation">
+                    <button class="nextButton" onclick="nextSlide(6)">Next</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="slide12" class="slide">
+          <h1>I have song for you</h1>
+          <div class="navigation">
+              <button class="nextButton" onclick="nextSlide(12)">Next</button>
+          </div>
+      </div>
+
+
+      <div id="slide7" class="slide">
+        <h1>Kasih Putih - Glen Fredly</h1>
+        <p class="song-details">Every day we spend together is a testament to the love that grows between us. My feelings for you are like pure and genuine love, as sweet as the color white. Watching how you always care for and help those around you makes me feel incredibly lucky to have a partner like you.
+
+          Your kindness brings so much color to my life. When you listen and support me in every step I take, I feel like nothing is impossible. Your thoughtful actions warm my heart and make me feel loved completely.
+          
+          My hope for us is that our relationship continues to grow, filled with love and understanding. I want us to motivate each other to reach our dreams and create many beautiful memories together. With you by my side, I truly believe we can build a bright and happy future.
+          
+          Forever, I love you.
+          
+          </p> <!-- Deskripsi lagu -->
+        <div class="gif-container">
+            <img src="love.gif" alt="Kasih Putih GIF" class="birthday-gif" /> <!-- Ganti dengan path GIF yang sesuai -->
+        </div>
+        <audio id="background-music" src="song.mp3" autoplay loop></audio> <!-- Background Music -->
+      
+        <div class="audio-controls-container">
+          <div class="audio-controls">
+              <button class="play-button" onclick="document.getElementById('background-music').play()">Play Music</button>
+              <button class="pause-button" onclick="document.getElementById('background-music').pause()">Pause Music</button>
+          </div>
+      </div>
+      <div class="navigation">
+        <button class="nextButton" onclick="nextSlide(12)">Next</button>
+    </div>
+    </div>
+    
+        
+
+      <div id="slide8" class="slide">
+        <h1>This flower is for you!</h1>
+        <img src="rose.gif" alt="Flower GIF" class="flower-gif" /> <!-- Replace with your GIF path -->
+        <div class="navigation">
+            <button class="nextButton" onclick="nextSlide(8)">Next</button>
+        </div>
+    </div>
+    
+        <div id="slide9" class="slide">
+            <h1>I hope you  enjoy for this day! See u</h1>
+            <img src="KISS.gif" alt="Flower GIF" class="love-gif"/>
+            <audio id="background-music" src="birthdaysong.mp3" autoplay loop></audio> <!-- Background Music -->
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
